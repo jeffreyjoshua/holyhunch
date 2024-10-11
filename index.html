@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Theme Page</title>
+    <style>
+        body {
+            background-color: #000; /* Black background */
+            color: #000; /* Black text */
+            font-family: Arial, sans-serif;
+        }
+        a {
+            color: #000; /* Hidden link by default */
+            text-decoration: none;
+        }
+        a:hover {
+            color: #fff; /* White on hover */
+        }
+    </style>
+    <script>
+        // Disable right-click
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+
+        // Disable F12, Ctrl+Shift+I, Ctrl+Shift+C, Ctrl+Shift+J
+        document.onkeydown = function(e) {
+            if (e.key === 'F12' || 
+                (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'C' || e.key === 'J')) ||
+                (e.ctrlKey && e.key === 'U')) {
+                return false;
+            }
+        };
+    </script>
+</head>
+<body>
+    <h1>Dark Web Page</h1>
+    <p>This text is hidden because it has the same color as the background.</p>
+    <a href="#">Hover over this text to see it appear.</a>
+</body>
+</html>
